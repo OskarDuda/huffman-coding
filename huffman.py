@@ -18,6 +18,12 @@ def count_unique_values(v):
         tmp[x]=v.count(x)
     return tmp
 
+def remove_punctuation(s):
+    output = [el for el in s if el in set('the quick brown fox jumps over the lazy dog') |
+                                      set('the quick brown fox jumps over the lazy dog'.upper()) |
+                                      {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}]
+    return output
+
 def create_huffman_code(v):
     #initial list of trees
     trees = []
